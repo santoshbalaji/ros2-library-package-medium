@@ -1,4 +1,4 @@
-// Copyright 2022 Advanced remanufacturing and technology centre (ARA).
+// Copyright 2022 [No Owner].
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -18,15 +18,16 @@
 #include <try_out_utils/point.hpp>
 #include <memory>
 #include <cmath>
+#include <vector>
 
 class PointChecker
 {
-  private:
-    std::vector<Point*> points_;
+private:
+  std::vector<Point *> points_;
 
-  public:
-    void add_point(double x, double y);
-    std::vector<std::vector<double>> find_distance_matrix();
+public:
+  void add_point(double x, double y);
+  std::vector<std::vector<double>> find_distance_matrix();
 };
 
 #endif  // TRY_OUT__POINT_CHECKER_HPP_

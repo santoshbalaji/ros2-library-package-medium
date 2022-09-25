@@ -4,10 +4,12 @@
   <name>try_out</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="santechselva@gmail.com">santoshartc</maintainer>
-  <license>TODO: License declaration</license>
+  <maintainer email="santechselva@gmail.com">santosh balaji</maintainer>
+  <license>Apache License 2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>try_out_utils</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
