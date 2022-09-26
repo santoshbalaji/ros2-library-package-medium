@@ -4,7 +4,7 @@
   <name>try_out</name>
   <version>0.1.0</version>
   <description>Work package which utilizes the created library package</description>
-  <maintainer email="santechselva@gmail.com">santosh balaji</maintainer>
+  <maintainer email="sample@email.com">santosh balaji</maintainer>
   <license>Apache License 2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

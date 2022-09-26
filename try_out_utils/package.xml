@@ -4,7 +4,7 @@
   <name>try_out_utils</name>
   <version>0.1.0</version>
   <description>Utility package for commonly used functions</description>
-  <maintainer email="santechselva@gmail.com">santosh balaji</maintainer>
+  <maintainer email="sample@email.com">santosh balaji</maintainer>
   <license>Apache License 2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
