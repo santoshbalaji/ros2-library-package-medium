@@ -15,6 +15,8 @@
 #ifndef TRY_OUT_UTILS__POINT_HPP_
 #define TRY_OUT_UTILS__POINT_HPP_
 
+namespace try_out_utils
+{
 class Point
 {
 private:
@@ -26,5 +28,6 @@ public:
   double get_x();
   double get_y();
 };
+}  // namespace try_out_utils
 
 #endif  // TRY_OUT_UTILS__POINT_HPP_

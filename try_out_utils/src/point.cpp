@@ -14,18 +14,18 @@
 
 #include <try_out_utils/point.hpp>
 
-Point::Point(double x, double y)
+try_out_utils::Point::Point(double x, double y)
 {
   this->x_ = x;
   this->y_ = y;
 }
 
-double Point::get_x()
+double try_out_utils::Point::get_x()
 {
   return this->x_;
 }
 
-double Point::get_y()
+double try_out_utils::Point::get_y()
 {
   return this->y_;
 }

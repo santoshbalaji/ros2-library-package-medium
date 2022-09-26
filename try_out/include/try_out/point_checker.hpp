@@ -23,7 +23,7 @@
 class PointChecker
 {
 private:
-  std::vector<Point *> points_;
+  std::vector<try_out_utils::Point *> points_;
 
 public:
   void add_point(double x, double y);

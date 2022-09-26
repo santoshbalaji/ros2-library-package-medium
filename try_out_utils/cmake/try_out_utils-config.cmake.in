@@ -1,0 +1,14 @@
+@PACKAGE_INIT@
+
+get_filename_component(try_out_utils_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+include(CMakeFindDependencyMacro)
+
+message("test")
+message("${try_out_utils_CMAKE_DIR}")
+
+if(NOT TARGET try_out_utils::try_out_utils)
+    include("${try_out_utils_CMAKE_DIR}/try_out_utils-targets.cmake")
+endif()
+
+check_required_components(try_out_utils)

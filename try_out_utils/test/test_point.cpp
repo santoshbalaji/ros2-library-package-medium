@@ -19,7 +19,7 @@ TEST_CASE("Test for point", "[]")
 {
   SECTION("Test for point with object creation")
   {
-    Point p(11, 10);
+    try_out_utils::Point p(11, 10);
     REQUIRE(p.get_x() == 11);
     REQUIRE(p.get_y() == 10);
   }

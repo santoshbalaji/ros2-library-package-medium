@@ -18,7 +18,7 @@
 
 void PointChecker::add_point(double x, double y)
 {
-  Point * point = new Point(x, y);
+  try_out_utils::Point * point = new try_out_utils::Point(x, y);
   this->points_.push_back(point);
 }
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(try_out)
+project(try_out VERSION 0.1.0)
 
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 17)
@@ -18,6 +18,8 @@ find_package(Catch2 REQUIRED)
 
 include_directories(include)
 
+# include(/home/santosh/ros2_personal_ws/install/try_out_utils/lib/cmake/try_out_utils/try_out_utils_targets.cmake)
+
 add_library(try_out SHARED
   src/point_checker.cpp
 )
@@ -25,24 +27,29 @@ add_library(try_out SHARED
 target_include_directories(try_out PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
-  ${try_out_utils_INCLUDE_DIRS}
+  # ${try_out_utils_INCLUDE_DIRS}
   ${rclcpp_INCLUDE_DIRS})
 
-add_executable(
-  try src/point_checker.cpp)
+target_link_libraries(try_out 
+  PUBLIC
+    try_out_utils::try_out_utils
+)
 
-target_include_directories(try PUBLIC
-  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
-  $<INSTALL_INTERFACE:include>)
+# add_executable(
+#   try src/point_checker.cpp)
 
-ament_target_dependencies(
-  try
-  rclcpp
-  try_out_utils)
+# target_include_directories(try PUBLIC
+#   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+#   $<INSTALL_INTERFACE:include>)
 
-install(TARGETS
-try
-DESTINATION lib/${PROJECT_NAME})
+# ament_target_dependencies(
+#   try
+#   rclcpp
+#   try_out_utils)
+
+# install(TARGETS
+# try
+# DESTINATION lib/${PROJECT_NAME})
 
 install(
   TARGETS
@@ -76,5 +83,8 @@ if(BUILD_TESTING)
   find_package(try_out_utils REQUIRED)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+message("${try_out_utils_LIBRARIES}")
+message("${try_out_utils_INCLUDE_DIRS}")
 
 ament_package()
