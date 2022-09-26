@@ -44,5 +44,7 @@ std::vector<std::vector<double>> PointChecker::find_distance_matrix()
 
 int main()
 {
+  PointChecker point_checker;
+  point_checker.add_point(5, 5);
   return 0;
 }
